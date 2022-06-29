@@ -3,7 +3,7 @@
         <div class="sidebar-content">
             <div class="user">
                 <div class="avatar-sm float-left mr-2">
-                    <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+                    <img src="{{ asset('back/assets/img/foto.jpeg') }}" alt="..." class="avatar-img rounded-circle">
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -48,10 +48,6 @@
                     <a href="{{ route('kategori.index') }}">
                         <i class="fas fa-desktop"></i>
                         <p>Daftar Berita</p>
-                    </a>
-                    <a href="{{ route('kategori.index') }}">
-                        <i class="fas fa-desktop"></i>
-                        <p>wkwk</p>
                     </a>
                 </li>
                 <li class="nav-item">

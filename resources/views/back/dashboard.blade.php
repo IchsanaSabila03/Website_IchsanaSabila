@@ -12,7 +12,8 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Berita Terpopuler</div>
+						<div class="card-title"></div>
+						<h2>SISTEM APLIKASI BERBASIS WEBSITE</h2>
 					</div>
 				</div>
 				<div class="card-body">
