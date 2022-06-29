@@ -13,7 +13,7 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Data Kategori</div>
+						<div class="card-title">Daftar Berita</div>
 					</div>
 				</div>
 				<div class="card-body">
