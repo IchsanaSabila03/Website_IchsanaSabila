@@ -51,12 +51,15 @@
                         <i class="fas fa-desktop"></i>
                         <p>Kategori</p>
                     </a>
+<<<<<<< HEAD
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('artikel.index') }}">
                         <i class="fas fa-desktop"></i>
                         <p>Artikel</p>
                     </a>
+=======
+>>>>>>> 47a6c76382c9b5eb1b834dafa69eab653e0572aa
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('logout') }}"
