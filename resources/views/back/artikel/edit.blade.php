@@ -12,14 +12,14 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Edit Artikel{{ $artikel->judul }}</div>
+						<div class="card-title">Edit artikel</div>
 					</div>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-                        <form action="{{ route('artikel.edit', $artikel->id) }}" method="POST" enctype="multipart/form-data">
-						@csrf
-						@method('put')
+                        <form action="/artikel/{{$artikel->id}}" method="POST" enctype="multipart/form-data">
+							@method('put')
+							@csrf
 							<div class="mb-3">
 								<label for="judul" class="form-label">Judul Artikel</label>
 								<input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" 
