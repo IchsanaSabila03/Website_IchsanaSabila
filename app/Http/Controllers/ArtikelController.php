@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class ArtikelController extends Controller
+class Artikelcontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -93,10 +93,6 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $Data = $request->validate([
-        //     'judul' => 'required|max:255'
-        // ]);
-
         if(empty($request->file('gambar_artikel'))){
             $artikel = Artikel::find($id);
             $artikel->update([
@@ -119,9 +115,8 @@ class ArtikelController extends Controller
                 'gambar_artikel' => $request->file('gambar_artikel')->store('artikel'),
             ]);
             return redirect()->route('artikel.index')->with(['success', 'Artikel berhasil di edit']);
-        }
     }
-
+}
     /**
      * Remove the specified resource from storage.
      *
