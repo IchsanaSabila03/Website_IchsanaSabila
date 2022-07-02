@@ -19,7 +19,7 @@
 					<div class="table-responsive">
                         <form action="{{ route('artikel.edit', $artikel->id) }}" method="POST" enctype="multipart/form-data">
 						@csrf
-						@method('PUT')
+						@method('put')
 							<div class="mb-3">
 								<label for="judul" class="form-label">Judul Artikel</label>
 								<input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" 
