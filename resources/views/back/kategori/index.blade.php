@@ -1,7 +1,6 @@
 @extends('layouts.default')
-
 @section('content')
-<div class="panel-header bg-primary-gradient">
+<div class="panel-header bg-dark">
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 		</div>
@@ -13,7 +12,8 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Daftar Berita</div>
+						<div class="card-title">Daftar Kategori</div>
+                        <a href="/kategori/create" class="btn btn-primary m-2 p-2">Tambah Kategori</a>
 					</div>
 				</div>
 				<div class="card-body">
@@ -28,27 +28,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($kategori as $row)
+                            @foreach ($kategori as $row)
                             <tr>
                                 <td>{{ $row->id }}</td>
                                 <td>{{ $row->nama_kategori }}</td>
                                 <td>{{ $row->slug }}</td>
-                                <td>Aksi</td>
+                                <td>
+                                    <a href="/kategori/{{$row->id}}/edit" class="badge bg-warning">Edit</a>
+                                    <form action="/kategori/{{$row->id}}" method="POST" class="d-inline">
+                                    @method('delete')
+                                    @csrf
+                                        <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')">Delete</button>
+                                    </form>
+                                </td>
                             </tr>
-                            @empty
-                            <tr>
-                                <td>Data Masih Kosong</td>
-                            </tr>
-                            @endforelse
-                            
+                            @endforeach
                         </tbody>
                     </table>
 					</div>
-
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 @endsection

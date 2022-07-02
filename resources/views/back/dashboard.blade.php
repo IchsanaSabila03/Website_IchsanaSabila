@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-<div class="panel-header bg-primary-gradient">
+<div class="panel-header bg-dark">
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 		</div>
@@ -12,14 +12,14 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Berita Terpopuler</div>
+						<div class="card-title"></div>
+						<h2>SISTEM APLIKASI BERBASIS WEBSITE</h2>
 					</div>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-					
-					</div>
 
+					</div>
 				</div>
 			</div>
 		</div>

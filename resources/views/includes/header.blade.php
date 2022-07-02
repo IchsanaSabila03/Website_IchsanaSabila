@@ -1,9 +1,8 @@
 <div class="main-header">
     <!-- Logo Header -->
-    <div class="logo-header" data-background-color="blue">
-        
-        <a href="index.html" class="logo">
-            <span>
+    <div class="logo-header" data-background-color="dark">
+        <a href="/dashboard" class="logo">
+            <span class="text-white">
                 BERITA.COM
             </span>
         </a>
@@ -22,8 +21,8 @@
     <!-- End Logo Header -->
 
     <!-- Navbar Header -->
-    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-        
+    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
+
         <div class="container-fluid">
             <div class="collapse" id="search-nav">
                 <form class="navbar-left navbar-form nav-search mr-md-3">

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Kategori;
+use Illuminate\Http\Request;
 
 class KategoriController extends Controller
 {
@@ -25,7 +25,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        $kategori = kategori::all();
+        return view('back.kategori.create', compact('kategori'));
     }
 
     /**
@@ -36,7 +37,15 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Data = $request->validate([
+            'nama_kategori' => 'required|max:255',
+            'slug' => 'required',
+        ]);
+
+        $Data['user_id'] = auth()->user()->id;
+
+        Kategori::create($Data);
+        return redirect('/kategori')->with('success', 'Post berhasil di tambah');
     }
 
     /**
@@ -58,7 +67,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $row = kategori::find($id);
+        return view('back.kategori.edit', compact('row'));
     }
 
     /**
@@ -70,7 +80,15 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Data = $request->validate([
+            'nama_kategori' => 'required|max:255',
+            'slug' => 'required',
+        ]);
+
+        Kategori::where('id', $id)
+            ->update($Data);
+        return redirect('/kategori');
+
     }
 
     /**
@@ -81,6 +99,7 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Kategori::destroy($id);
+        return redirect('/kategori');
     }
 }
