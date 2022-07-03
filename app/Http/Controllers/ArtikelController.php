@@ -64,7 +64,13 @@ class Artikelcontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $artikel = Artikel::find($id);
+        $kategori = Kategori::all();
+
+        return view('back.artikel.show', [
+        'artikel' => $artikel,
+        'kategori' => $kategori
+        ]);
     }
 
     /**
@@ -101,7 +107,7 @@ class Artikelcontroller extends Controller
                 'slug' => Str::slug($request->judul),
                 'deksripsi' => $request->deksripsi,
                 'kategori_id' => $request->kategori_id,
-            ]);
+            ]); 
             return redirect()->route('artikel.index')->with(['success', 'Artikel berhasil di edit']);
         } else {
             $artikel = Artikel::find($id);
@@ -125,6 +131,7 @@ class Artikelcontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        Artikel::destroy($id);
+        return redirect('/artikel');
     }
 }

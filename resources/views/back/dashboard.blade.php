@@ -11,19 +11,21 @@
 		<div class="col-md-12">
 			<div class="card full-height">
 				<div class="card-header">
-					<div class="card-head-row">
-						<div class="card-title"></div>
-						<h2>SISTEM APLIKASI BERBASIS WEBSITE</h2>
+					<div class="card-head-row" style="width: 100%">
+						<div class="card-title text-center w-100"><h1>BERITA.COM</h1></div>
 					</div>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-
+						<br><div  class="text-center"><img width=800 src="{{ asset("image/capture1.png")}}"><br></div>
+						<br><div  class="text-center"><img width=800 src="{{ asset("image/capture2.png")}}"><br></div>
+						<br><div  class="text-center"><img width=800 src="{{ asset("image/capture3.png")}}"><br></div>
+						<br><div  class="text-center"><img width=800 src="{{ asset("image/capture4.png")}}"><br></div>
+						<br><div  class="text-center"><img width=800 src="{{ asset("image/capture5.png")}}"><br></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 @endsection

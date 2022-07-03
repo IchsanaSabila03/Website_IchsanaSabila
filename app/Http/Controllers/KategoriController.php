@@ -88,7 +88,6 @@ class KategoriController extends Controller
         Kategori::where('id', $id)
             ->update($Data);
         return redirect('/kategori');
-
     }
 
     /**

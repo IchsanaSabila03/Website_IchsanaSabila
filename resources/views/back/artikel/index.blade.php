@@ -42,9 +42,10 @@
                                 <td>{{ $row->slug }}</td>
                                 <td>{{ $row->deksripsi }}</td>
                                 <td>{{ $row->kategori->nama_kategori }}</td>
-                                <td>{{ $row->gambar_artikel }}</td>
+                                <td><img src="{{ asset('uploads/'.$row->gambar_artikel) }}"width="200"></td>
                                 <td>
                                     <a href="/artikel/{{$row->id}}/edit" class="badge bg-warning">Edit</a>
+                                    <a href="/artikel/{{$row->id}}" class="badge badge-success">Show</a>
                                     <form action="/artikel/{{$row->id}}" method="POST" class="d-inline">
                                     @method('delete')
                                     @csrf

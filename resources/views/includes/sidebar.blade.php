@@ -18,18 +18,8 @@
                     <div class="collapse in" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#profile">
+                                <a href="{{ route('user') }}">
                                     <span class="link-collapse">My Profile</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#edit">
-                                    <span class="link-collapse">Edit Profile</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#settings">
-                                    <span class="link-collapse">Settings</span>
                                 </a>
                             </li>
                         </ul>
@@ -54,7 +44,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('artikel.index') }}">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-book"></i>
                         <p>Artikel</p>
                     </a>
                 </li>

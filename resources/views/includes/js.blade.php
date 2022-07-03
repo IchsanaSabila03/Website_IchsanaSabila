@@ -35,7 +35,7 @@
 <!-- Atlantis JS -->
 <script src="{{ asset('back/assets/js/atlantis.min.js') }}"></script>
 
-<!-- Atlantis DEMO methods, don't include it in your project! -->
+{{-- <!-- Atlantis DEMO methods, don't include it in your project! -->
 <script src="{{ asset('back/assets/js/setting-demo.js') }}"></script>
 <script src="{{ asset('back/assets/js/demo.js') }}"></script>
 <script>
@@ -131,4 +131,4 @@
         lineColor: '#ffa534',
         fillColor: 'rgba(255, 165, 52, .14)'
     });
-</script>
+</script> --}}
