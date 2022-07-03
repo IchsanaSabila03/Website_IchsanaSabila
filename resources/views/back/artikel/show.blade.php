@@ -17,7 +17,7 @@
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-						<div  class="text-center"><img src="{{ asset('uploads/'.$artikel->gambar_artikel) }}" width=300px></div>
+						<div  class="text-center"><img src="{{ asset('uploads/'.$artikel->gambar_artikel) }}" width=800px></div>
 						<br><div class="card-documentation text-center w-100">{{ $artikel->deksripsi }}</div>
 					</div>
 				</div>
